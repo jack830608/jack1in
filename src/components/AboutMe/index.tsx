@@ -13,19 +13,14 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
         id="AboutMe"
         className={`px-[5%] py-[35px] lg:px-[10%] lg:py-[70px] relative max-w-[1600px] mx-auto ${css`
           :before {
-            content: "About";
+            content: "About Me";
             color: #ECF5FF;
             font-weight: 500;
             position: absolute;
             font-size: 5em;
             left: 4%;
             opacity: 0.1;
-          }
-          @media only screen and (min-width: 768px) {
-            :before {
-              font-size: 7em;
-              left: 7%;
-            }
+            white-space: nowrap;
           }
           @media only screen and (min-width: 1024px) {
             :before {
