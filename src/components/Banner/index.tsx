@@ -32,13 +32,19 @@ const Banner: React.FC<BannerProps> = (props) => {
     >
       <div
         className={`bg-no-repeat absolute w-screen h-screen z-10 ${css`
-          background-image: url("/images/new_head.png");
-          background-size: auto 90%;
+          background-image: url("/images/head.png");
+          background-size: auto 50%;
           background-position: bottom -35px right -30px;
+          @media only screen and (min-width: 768px) {
+            background-size: auto 60%;
+          }
+          @media only screen and (min-width: 1024px) {
+            background-size: auto 90%;
+          }
         `}`}
       >
-        <div className="flex justify-center items-center w-screen h-screen absolute bg-[rgba(0,0,0,0.4)] z-10">
-          <div className="text-[110px] font-bold text-[#ECF5FF] font-[Kanit] cursor-default">
+        <div className="flex flex-col justify-center items-center w-screen h-screen absolute bg-[rgba(0,0,0,0.4)] z-10">
+          <div className="text-[48px] md:text-[80px] lg:text-[110px] text-center font-bold text-[#ECF5FF] font-[Kanit] cursor-default">
             {word}
             <span
               className={`font-light ${css`
@@ -49,72 +55,52 @@ const Banner: React.FC<BannerProps> = (props) => {
             >
               ｜
             </span>
-            <div
-              className={`flex justify-center items-center transition-opacity ${
-                animationIsEnd ? "opacity-100" : "opacity-0"
-              }`}
+          </div>
+          <div
+            className={`flex justify-center items-center transition-opacity text-[#ECF5FF] text-lg md:text-2xl ${
+              animationIsEnd ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <a
+              href="https://www.facebook.com/WEIJIE.LIN7777"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:-translate-y-1 transition-transform p-3 md:p-5"
             >
-              <a
-                href="https://www.facebook.com/WEIJIE.LIN7777"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:-translate-y-1 transition-transform"
-              >
-                <img
-                  src="/images/facebook.svg"
-                  className="w-[20px] m-5"
-                  alt="facebook"
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/jack1in/"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:-translate-y-1 transition-transform"
-              >
-                <img
-                  src="/images/linkedin.svg"
-                  className="w-[20px]  m-5"
-                  alt="linkedin"
-                />
-              </a>
-              <a
-                href="https://github.com/jack830608"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:-translate-y-1 transition-transform"
-              >
-                <img
-                  src="/images/github.svg"
-                  className="w-[20px]  m-5"
-                  alt="github"
-                />
-              </a>
-              <a
-                href="https://line.me/ti/p/0f4vdsbN3Z"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:-translate-y-1 transition-transform"
-              >
-                <img
-                  src="/images/line.svg"
-                  className="w-[20px]  m-5"
-                  alt="line"
-                />
-              </a>
-              <a
-                href="mailto:jack830608@gmail.com"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:-translate-y-1 transition-transform"
-              >
-                <img
-                  src="/images/google.svg"
-                  className="w-[20px]  m-5"
-                  alt="google"
-                />
-              </a>
-            </div>
+              <i className="fab fa-facebook-square" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jack1in/"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:-translate-y-1 transition-transform p-3 md:p-5"
+            >
+              <i className="fab fa-linkedin" />
+            </a>
+            <a
+              href="https://github.com/jack830608"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:-translate-y-1 transition-transform p-3 md:p-5"
+            >
+              <i className="fab fa-github-square" />
+            </a>
+            <a
+              href="https://line.me/ti/p/0f4vdsbN3Z"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:-translate-y-1 transition-transform p-3 md:p-5"
+            >
+              <i className="fab fa-line" />
+            </a>
+            <a
+              href="mailto:jack830608@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:-translate-y-1 transition-transform p-3 md:p-5"
+            >
+              <i className="fab fa-google-plus-square" />
+            </a>
           </div>
         </div>
       </div>
@@ -127,7 +113,9 @@ const Banner: React.FC<BannerProps> = (props) => {
           />
         </div>
       </div>
-      <Particles options={particlesOptions as ISourceOptions} className="" />
+      <Particles
+        options={particlesOptions as ISourceOptions}
+      />
     </div>
   );
 };
