@@ -20,7 +20,7 @@ const Banner: React.FC<BannerProps> = (props) => {
   }, [props.show]);
   const animationIsEnd = word === intro;
   return (
-    <div
+    <section
       id="Banner"
       className={`w-screen h-screen relative ${css`
         background: linear-gradient(
@@ -93,14 +93,14 @@ const Banner: React.FC<BannerProps> = (props) => {
             >
               <i className="fab fa-line" />
             </a>
-            <a
+            {/* <a
               href="mailto:jack830608@gmail.com"
               target="_blank"
               rel="noreferrer"
               className="hover:-translate-y-1 transition-transform p-3 md:p-5"
             >
               <i className="fab fa-google-plus-square" />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
@@ -116,7 +116,7 @@ const Banner: React.FC<BannerProps> = (props) => {
       <Particles
         options={particlesOptions as ISourceOptions}
       />
-    </div>
+    </section>
   );
 };
 export default Banner;

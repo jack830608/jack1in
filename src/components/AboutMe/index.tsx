@@ -4,7 +4,7 @@ type AboutMeProps = {};
 
 const AboutMe: React.FC<AboutMeProps> = (props) => {
   return (
-    <div
+    <section
       className={css`
         background: linear-gradient(180deg, #130f15 50%, #151515);
       `}
@@ -79,7 +79,7 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
           </div>
           <div className="w-[100%] lg:w-[45%]">
             <h1
-              className={`text-[48px] lg:text-[160px] text-right lg:text-center z-10 text-transparent font-[Kanit] tracking-[1px] bg-clip-text bg-no-repeat bg-fixed ${css`
+              className={`text-[48px] lg:text-[160px] text-right z-10 text-transparent font-[Kanit] tracking-[1px] bg-clip-text bg-no-repeat bg-fixed ${css`
                 background-image: url(/images/Introduction.jpg);
                 background-position: 50%;
                 background-size: 100%;
@@ -90,7 +90,7 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

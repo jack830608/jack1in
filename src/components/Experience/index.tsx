@@ -1,28 +1,40 @@
 import { css } from "@emotion/css";
 
-const timelineBlock = (dir:'left' | 'right' = 'left') => (`${dir === 'right' ? 'ml-auto' : ''} relative ml-[55px] mr-[10px] bg-[#272727] rounded-[5px] p-16 text-[#ecf5ff] lg:p-[22px] lg:w-[36%] lg:my-[5%] ${css`
-:before {
-  content: "";
-  position: absolute;
-  top: 16px;
-  right: 100%;
-  height: 0;
-  width: 0;
-  border: 7px solid transparent;
-  border-right-color: #272727;
-}
-@media only screen and (min-width: 1024px) {
+const timelineBlock = (
+  dir: "left" | "right" = "left"
+) => `relative ml-[45px] mr-[10px] lg:ml-[5%] lg:mr-[5%] bg-[#272727] rounded-[5px] p-4 lg:p-6 text-[#ecf5ff] lg:p-[22px] lg:w-[40%] lg:my-[5%]
+${dir === "right" ? "lg:ml-auto" : ""} 
+${css`
   :before {
-    top: 24px;
-    ${dir}: 100%;
-    border-color: ${dir === 'left' ? 'transparent transparent transparent #272727' : 'transparent #272727 transparent transparent'};
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 100%;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-right-color: #272727;
   }
-}
-`}`);
-
+  @media only screen and (min-width: 1024px) {
+    :before {
+      top: 20px;
+      ${dir}: 100%;
+      border: 10px solid transparent;
+      border-color: ${dir === "left"
+        ? "transparent transparent transparent #272727"
+        : "transparent #272727 transparent transparent"};
+    }
+  }
+`}`;
+const timelineCompany =
+  "text-[hsla(0,0%,100%,.9)] text-lg mb-[5px] font-semibold";
+const timelinePeriod = "text-[hsla(0,0%,100%,.9)] text-sm font-light mb-4";
+const timelineInfo =
+  "text-[hsla(0,0%,100%,.7)] text-sm font-light leading-[22px]";
+const timelineSpot = 'border-[5px] border-[#151515] w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] left-[12px] lg:left-[50%] translate-x-[-15px] lg:translate-x-[-20px] top-2 rounded-full absolute bg-[#e7b266]';
 const Experience: React.FC = () => {
   return (
-    <div className="bg-[#151515]">
+    <section className="bg-[#151515]">
       <div
         id="AboutMe"
         className={`px-[5%] py-[35px] lg:px-[10%] lg:py-[70px] relative max-w-[1600px] mx-auto ${css`
@@ -55,16 +67,18 @@ const Experience: React.FC = () => {
           </h1>
         </div>
         <div className="mt-[150px] lg:mt-[250px]">
-          <section
-            className={`relative pt-[10px] ${css`
+          <div
+            className={`relative pt-[10px] max-w-[1080px] bg-no-repeat bg-fixed ${css`
               :before {
                 content: "";
                 position: absolute;
                 top: 0;
-                left: 25px;
+                left: 10px;
                 height: 100%;
-                width: 7px;
-                background: #272727;
+                width: 5px;
+                background-image: url(/images/Experience.jpg);
+                background-position: 50%;
+                background-size: cover;
               }
               :after {
                 content: "";
@@ -75,73 +89,46 @@ const Experience: React.FC = () => {
                 :before {
                   left: 50%;
                   margin-left: -3px;
+                  width: 7px;
                 }
               }
             `}`}
           >
             <div className="my-[32px] lg:my-[64px] relative">
-              <div className="border-[6px] border-[#272727] w-[30px] h-[30px] left-[50%] translate-x-[-15px] top-2 rounded-full absolute bg-[#151515] flex justify-center items-center">
-                <img
-                  src="/images/pg.png"
-                  alt="pg"
-                  className="rounded-full w-full h-full border border-white"
-                />
-              </div>
-              <div className={timelineBlock('left')}>
-                <h2>Positive Grid</h2>
-                <div className="timeline-content-info">
-                  <span
-                    className="timeline-content-info-title"
-                    style={{ marginRight: "10px" }}
-                  >
-                    Senior Front-end Developer
-                  </span>
-                  <span className="timeline-content-info-date">
-                    <i className="fa fa-calendar-o" aria-hidden="true">
-                      2020-08 ~ Now
-                    </i>
-                  </span>
+              <div
+                className={timelineSpot}
+              />
+              <div className={timelineBlock("left")}>
+                <h2 className={timelineCompany}>Positive Grid</h2>
+                <div className={timelinePeriod}>
+                  <span className="mr-[10px]">Senior Front-end Developer</span>
+                  <i>2020-08 ~ Now</i>
                 </div>
-                <p>
+                <p className={timelineInfo}>
                   In Positive Grid my responsibility is to help our e-commerce
                   site faster and stabler, at the same time I need to lead two
                   junior developers to complete tasks from the marketing team.
                 </p>
                 <br />
                 <p>
-                  <span style={{ color: "#FFF", fontSize: "16px" }}>
-                    Skill：
-                  </span>
-                  <span style={{ fontStyle: "italic" }}>
+                  <span className="text-white font-light">Skill：</span>
+                  <span className={`${timelineInfo} italic`}>
                     HTML5、CSS3、JavaScript、TypeScript、Tailwind、emotion、Node.js、Express、React、Next.js
                   </span>
                 </p>
               </div>
             </div>
             <div className="my-[32px] lg:my-[64px] relative">
-              <div className="border-[6px] border-[#272727] w-[30px] h-[30px] left-[50%] translate-x-[-15px] top-2 rounded-full absolute bg-[#151515] flex justify-center items-center">
-                <img
-                  src="/images/vpon.png"
-                  alt="vpon"
-                  className="rounded-full w-full h-full border border-white"
-                />
-              </div>
-              <div className={timelineBlock('right')}>
-                <h2>Vpon - 威朋大數據集團</h2>
-                <div className="timeline-content-info">
-                  <span
-                    className="timeline-content-info-title"
-                    style={{ marginRight: "10px" }}
-                  >
-                    Software Engineer
-                  </span>
-                  <span className="timeline-content-info-date">
-                    <i className="fa fa-calendar-o" aria-hidden="true">
-                      2019-11 ~ 2020-08
-                    </i>
-                  </span>
+              <div
+                className={timelineSpot}
+              />
+              <div className={timelineBlock("right")}>
+                <h2 className={timelineCompany}>Vpon - 威朋大數據集團</h2>
+                <div className={timelinePeriod}>
+                  <span className="mr-[10px]">Software Engineer</span>
+                  <i>2019-11 ~ 2020-08</i>
                 </div>
-                <p>
+                <p className={timelineInfo}>
                   Vpon is an advertising company combining big data, for me it's
                   completely different from my previous job. There are more than
                   70 engineers in Vpon so we can exchange skills with each other
@@ -149,40 +136,24 @@ const Experience: React.FC = () => {
                 </p>
                 <br />
                 <p>
-                  <span style={{ color: "#FFF", fontSize: "16px" }}>
-                    Skill：
-                  </span>
-                  <span style={{ fontStyle: "italic" }}>
+                  <span className="text-white font-light">Skill：</span>
+                  <span className={`${timelineInfo} italic`}>
                     HTML5、CSS3、JavaScript、jQuery、Node.js、Express、React、MySQL、Docker、GTM、GA、ShellScript
                   </span>
                 </p>
               </div>
             </div>
             <div className="my-[32px] lg:my-[64px] relative">
-              <div className="border-[6px] border-[#272727] w-[30px] h-[30px] left-[50%] translate-x-[-15px] top-2 rounded-full absolute bg-[#151515] flex justify-center items-center">
-                <img
-                  src="/images/tripmoment.jpeg"
-                  alt="tripmoment"
-                  className="rounded-full w-full h-full border border-white"
-                />
-              </div>
-
-              <div className={timelineBlock('left')}>
-                <h2>Tripmoment - 時刻旅行</h2>
-                <div className="timeline-content-info">
-                  <span
-                    className="timeline-content-info-title"
-                    style={{ marginRight: "10px" }}
-                  >
-                    Front-end Developer
-                  </span>
-                  <span className="timeline-content-info-date">
-                    <i className="fa fa-calendar-o" aria-hidden="true">
-                      2019-08 ~ 2020-06
-                    </i>
-                  </span>
+              <div
+                className={timelineSpot}
+              />
+              <div className={timelineBlock("left")}>
+                <h2 className={timelineCompany}>Tripmoment - 時刻旅行</h2>
+                <div className={timelinePeriod}>
+                  <span className="mr-[10px]">Front-end Developer</span>
+                  <i>2019-08 ~ 2020-06</i>
                 </div>
-                <p>
+                <p className={timelineInfo}>
                   During the time at the Tripmoment, I have been responsible for
                   more things ,including Front-end and Back-end. It also let me
                   learn more skill and continue to help the company develop new
@@ -191,40 +162,26 @@ const Experience: React.FC = () => {
                 </p>
                 <br />
                 <p>
-                  <span style={{ color: "#FFF", fontSize: "16px" }}>
-                    Skill：
-                  </span>
-                  <span style={{ fontStyle: "italic" }}>
+                  <span className="text-white font-light">Skill：</span>
+                  <span className={`${timelineInfo} italic`}>
                     HTML5、CSS3、JavaScript、Node.js、Express、React、Redux、ejs、postgreSQL、GCP
                   </span>
                 </p>
               </div>
             </div>
             <div className="my-[32px] lg:my-[64px] relative">
-              <div className="border-[6px] border-[#272727] w-[30px] h-[30px] left-[50%] translate-x-[-15px] top-2 rounded-full absolute bg-[#151515] flex justify-center items-center">
-                <img
-                  src="/images/memepr.png"
-                  alt="memepr"
-                  className="rounded-full w-full h-full border border-white"
-                />
-              </div>
-
-              <div className={timelineBlock('right')}>
-                <h2>MemePR - 潮語傳媒股份有限公司</h2>
-                <div className="timeline-content-info">
-                  <span
-                    className="timeline-content-info-title"
-                    style={{ marginRight: "10px" }}
-                  >
-                    Front-end Developer
-                  </span>
-                  <span className="timeline-content-info-date">
-                    <i className="fa fa-calendar-o" aria-hidden="true">
-                      2018-06 ~ 2019-08
-                    </i>
-                  </span>
+              <div
+                className={timelineSpot}
+              />
+              <div className={timelineBlock("right")}>
+                <h2 className={timelineCompany}>
+                  MemePR - 潮語傳媒股份有限公司
+                </h2>
+                <div className={timelinePeriod}>
+                  <span className="mr-[10px]">Front-end Developer</span>
+                  <i>2018-06 ~ 2019-08</i>
                 </div>
-                <p>
+                <p className={timelineInfo}>
                   Since the love of AI had entered MemePR, there is no
                   difference in seniority here, As long as what is done is
                   right, it can be played. Finally, with the efforts of
@@ -241,10 +198,8 @@ const Experience: React.FC = () => {
                 </p>
                 <br />
                 <p>
-                  <span style={{ color: "#FFF", fontSize: "16px" }}>
-                    Skill：
-                  </span>
-                  <span style={{ fontStyle: "italic" }}>
+                  <span className="text-white font-light">Skill：</span>
+                  <span className={`${timelineInfo} italic`}>
                     HTML5、CSS3、JavaScript、Node.js、Express、React、Redux、Styled
                     Components、Next.js、AWS、postgreSQL
                   </span>
@@ -252,39 +207,25 @@ const Experience: React.FC = () => {
               </div>
             </div>
             <div className="my-[32px] lg:my-[64px] relative">
-              <div className="border-[6px] border-[#272727] w-[30px] h-[30px] left-[50%] translate-x-[-15px] top-2 rounded-full absolute bg-[#151515] flex justify-center items-center">
-                <img
-                  src="/images/injiaoyun.png"
-                  alt="injiaoyun"
-                  className="rounded-full w-full h-full border border-white"
-                />
-              </div>
-              <div className={timelineBlock('left')}>
-                <h2>
+              <div
+                className={timelineSpot}
+              />
+              <div className={timelineBlock("left")}>
+                <h2 className={timelineCompany}>
                   結音股份有限公司
                   <a
                     href="https://www.injiaoyun.com/jack.html"
-                    className="link"
-                    style={{ marginLeft: "5px" }}
+                    className="underline text-sm ml-[5px] font-light"
                     target="blank"
                   >
                     Recommendation Letter
                   </a>
                 </h2>
-                <div className="timeline-content-info">
-                  <span
-                    className="timeline-content-info-title"
-                    style={{ marginRight: "10px" }}
-                  >
-                    Back-end Developer
-                  </span>
-                  <span className="timeline-content-info-date">
-                    <i className="fa fa-calendar-o" aria-hidden="true">
-                      2017-09 ~ 2018-06
-                    </i>
-                  </span>
+                <div className={timelinePeriod}>
+                  <span className="mr-[10px]">Back-end Developer</span>
+                  <i>2017-09 ~ 2018-06</i>
                 </div>
-                <p>
+                <p className={timelineInfo}>
                   I have experienced a completely different corporate culture
                   and agile spirit than the previous company and always thinks
                   about the balance between efficiency and quality. It can
@@ -296,20 +237,18 @@ const Experience: React.FC = () => {
                 </p>
                 <br />
                 <p>
-                  <span style={{ color: "#FFF", fontSize: "16px" }}>
-                    Skill：
-                  </span>
-                  <span style={{ fontStyle: "italic" }}>
+                  <span className="text-white font-light">Skill：</span>
+                  <span className={`${timelineInfo} italic`}>
                     HTML5、CSS3、JavaScript、Node.js、Express、MongoDB、Mongoose、Angular.js
                     (1.x)、LineBot
                   </span>
                 </p>
               </div>
             </div>
-          </section>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
