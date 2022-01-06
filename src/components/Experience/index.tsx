@@ -1,4 +1,8 @@
+import React, { useEffect } from "react";
 import { css } from "@emotion/css";
+import useIntersection from "../../hooks/useIntersection";
+import { useSelector, useDispatch } from "react-redux";
+import { State } from "../../store";
 
 const timelineBlock = (
   dir: "left" | "right" = "left"
@@ -31,12 +35,30 @@ const timelineCompany =
 const timelinePeriod = "text-[hsla(0,0%,100%,.9)] text-sm font-light mb-4";
 const timelineInfo =
   "text-[hsla(0,0%,100%,.7)] text-sm font-light leading-[22px]";
-const timelineSpot = 'border-[5px] border-[#151515] w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] left-[12px] lg:left-[50%] translate-x-[-15px] lg:translate-x-[-20px] top-2 rounded-full absolute bg-[#e7b266]';
-const Experience: React.FC = () => {
+const timelineSpot =
+  "border-[5px] border-[#151515] w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] left-[12px] lg:left-[50%] translate-x-[-15px] lg:translate-x-[-20px] top-2 rounded-full absolute bg-[#e7b266]";
+
+type ExperienceProps = {};
+const Experience: React.FC<ExperienceProps> = () => {
+  const section = useSelector((state: State) => state.section);
+  const dispatch = useDispatch();
+  const [ref, isInView] = useIntersection(false);
+  useEffect(() => {
+    if (isInView) {
+      dispatch({ type: "ADD_SECTION", payload: "Experience" });
+    } else {
+      dispatch({ type: "REMOVE_SECTION", payload: 'Experience' });
+    }
+  }, [dispatch, isInView]);
   return (
-    <section className="bg-[#151515]">
+    <section
+      ref={ref}
+      id="Experience"
+      className={`${
+        section.includes("Experience") ? "opacity-100" : "opacity-0"
+      } transition-opacity duration-1000 ease-in-out bg-[#151515]`}
+    >
       <div
-        id="AboutMe"
         className={`px-[5%] py-[35px] lg:px-[10%] lg:py-[70px] relative max-w-[1600px] mx-auto ${css`
           :before {
             content: "Experience";
@@ -95,9 +117,7 @@ const Experience: React.FC = () => {
             `}`}
           >
             <div className="my-[32px] lg:my-[64px] relative">
-              <div
-                className={timelineSpot}
-              />
+              <div className={timelineSpot} />
               <div className={timelineBlock("left")}>
                 <h2 className={timelineCompany}>Positive Grid</h2>
                 <div className={timelinePeriod}>
@@ -119,9 +139,7 @@ const Experience: React.FC = () => {
               </div>
             </div>
             <div className="my-[32px] lg:my-[64px] relative">
-              <div
-                className={timelineSpot}
-              />
+              <div className={timelineSpot} />
               <div className={timelineBlock("right")}>
                 <h2 className={timelineCompany}>Vpon - 威朋大數據集團</h2>
                 <div className={timelinePeriod}>
@@ -144,9 +162,7 @@ const Experience: React.FC = () => {
               </div>
             </div>
             <div className="my-[32px] lg:my-[64px] relative">
-              <div
-                className={timelineSpot}
-              />
+              <div className={timelineSpot} />
               <div className={timelineBlock("left")}>
                 <h2 className={timelineCompany}>Tripmoment - 時刻旅行</h2>
                 <div className={timelinePeriod}>
@@ -170,9 +186,7 @@ const Experience: React.FC = () => {
               </div>
             </div>
             <div className="my-[32px] lg:my-[64px] relative">
-              <div
-                className={timelineSpot}
-              />
+              <div className={timelineSpot} />
               <div className={timelineBlock("right")}>
                 <h2 className={timelineCompany}>
                   MemePR - 潮語傳媒股份有限公司
@@ -207,9 +221,7 @@ const Experience: React.FC = () => {
               </div>
             </div>
             <div className="my-[32px] lg:my-[64px] relative">
-              <div
-                className={timelineSpot}
-              />
+              <div className={timelineSpot} />
               <div className={timelineBlock("left")}>
                 <h2 className={timelineCompany}>
                   結音股份有限公司

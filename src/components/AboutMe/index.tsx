@@ -1,20 +1,35 @@
+import { useEffect } from "react";
 import { css } from "@emotion/css";
+import useIntersection from "../../hooks/useIntersection";
+import { useSelector, useDispatch } from "react-redux";
+import { State } from "../../store";
 
 type AboutMeProps = {};
 
-const AboutMe: React.FC<AboutMeProps> = (props) => {
+const AboutMe: React.FC<AboutMeProps> = () => {
+  const section = useSelector((state: State) => state.section);
+  const dispatch = useDispatch();
+  const [ref, isInView] = useIntersection(false);
+  useEffect(() => {
+    if (isInView) {
+      dispatch({ type: "ADD_SECTION", payload: 'AboutMe' });
+    } else {
+      dispatch({ type: "REMOVE_SECTION", payload: 'AboutMe' });
+    }
+  }, [dispatch, isInView]);
   return (
     <section
-      className={css`
+      ref={ref}
+      className={`${section.includes("AboutMe") ? "opacity-100" : "opacity-0"} transition-opacity duration-1000 ease-in-out ${css`
         background: linear-gradient(180deg, #130f15 50%, #151515);
-      `}
+      `}`}
     >
       <div
         id="AboutMe"
         className={`px-[5%] py-[35px] lg:px-[10%] lg:py-[70px] relative max-w-[1600px] mx-auto ${css`
           :before {
             content: "About Me";
-            color: #ECF5FF;
+            color: #ecf5ff;
             font-weight: 500;
             position: absolute;
             font-size: 5em;

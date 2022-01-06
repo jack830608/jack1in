@@ -2,16 +2,18 @@ import Banner from "./components/Banner";
 import AboutMe from "./components/AboutMe";
 import ProcessBar from "./components/ProcessBar";
 import Experience from "./components/Experience";
+import Header from "./components/Header";
 
-function App() {
+const App = () => {
   return (
     <div className="overflow-hidden">
-      <Banner show />
+      <Header />
+      <Banner />
       <AboutMe />
-      <ProcessBar />
       <Experience />
+      <ProcessBar />
     </div>
   );
-}
+};
 
 export default App;

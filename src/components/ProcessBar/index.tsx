@@ -15,7 +15,7 @@ const ProcessBar: React.FC = () => {
   }, []);
   return (
     <div
-      className={`fixed bottom-0 left-0 opacity-70 h-1 z-50 rounded-xs transition ${css`
+      className={`fixed bottom-0 left-0 opacity-70 h-1 z-50 rounded-xs transition-all duration-100 ease-linear ${css`
         background-image: linear-gradient(
           139deg,
           #fb8817,
