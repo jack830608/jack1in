@@ -79,9 +79,9 @@ const Experience: React.FC<ExperienceProps> = () => {
       >
         <div>
           <h1
-            className={`font-bold z-10 text-[48px] lg:text-[70px] absolute top-[80px] left-[10%] lg:top-[160px] lg:left-[17%] tracking-[2px] cursor-default text-transparent font-[Kanit] bg-clip-text bg-no-repeat bg-fixed ${css`
+            className={`font-bold z-10 text-[48px] lg:text-[70px] absolute top-[80px] left-[10%] lg:top-[160px] lg:left-[17%] tracking-[2px] cursor-default text-transparent font-[Kanit] bg-clip-text bg-no-repeat lg:bg-fixed ${css`
               background-image: url(/images/Experience.jpg);
-              background-position: 50%;
+              background-position: 20%;
               background-size: 100%;
             `}`}
           >
@@ -90,7 +90,7 @@ const Experience: React.FC<ExperienceProps> = () => {
         </div>
         <div className="mt-[150px] lg:mt-[250px]">
           <div
-            className={`relative pt-[10px] max-w-[1080px] bg-no-repeat bg-fixed ${css`
+            className={`relative pt-[10px] max-w-[1600px] m-auto ${css`
               :before {
                 content: "";
                 position: absolute;
@@ -100,7 +100,8 @@ const Experience: React.FC<ExperienceProps> = () => {
                 width: 5px;
                 background-image: url(/images/Experience.jpg);
                 background-position: 50%;
-                background-size: cover;
+                background-size: auto 200%;
+                background-repeat: no-repeat;
               }
               :after {
                 content: "";
@@ -109,6 +110,7 @@ const Experience: React.FC<ExperienceProps> = () => {
               }
               @media only screen and (min-width: 1024px) {
                 :before {
+                  background-attachment: fixed;
                   left: 50%;
                   margin-left: -3px;
                   width: 7px;
@@ -133,7 +135,7 @@ const Experience: React.FC<ExperienceProps> = () => {
                 <p>
                   <span className="text-white font-light">Skill：</span>
                   <span className={`${timelineInfo} italic`}>
-                    HTML5、CSS3、JavaScript、TypeScript、Tailwind、emotion、Node.js、Express、React、Next.js
+                    HTML5、CSS3、JavaScript、TypeScript、Tailwind、emotion、Node.js、Express、React、Next.js、Jest、Playwright
                   </span>
                 </p>
               </div>

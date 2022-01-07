@@ -19,13 +19,13 @@ const AboutMe: React.FC<AboutMeProps> = () => {
   }, [dispatch, isInView]);
   return (
     <section
+      id="AboutMe"
       ref={ref}
       className={`${section.includes("AboutMe") ? "opacity-100" : "opacity-0"} transition-opacity duration-1000 ease-in-out ${css`
         background: linear-gradient(180deg, #130f15 50%, #151515);
       `}`}
     >
       <div
-        id="AboutMe"
         className={`px-[5%] py-[35px] lg:px-[10%] lg:py-[70px] relative max-w-[1600px] mx-auto ${css`
           :before {
             content: "About Me";
@@ -47,7 +47,7 @@ const AboutMe: React.FC<AboutMeProps> = () => {
       >
         <div>
           <h1
-            className={`font-bold z-10 text-[48px] lg:text-[70px] absolute top-[80px] left-[10%] lg:top-[160px] lg:left-[17%] tracking-[2px] cursor-default text-transparent font-[Kanit] bg-clip-text bg-no-repeat bg-fixed ${css`
+            className={`font-bold z-10 text-[48px] lg:text-[70px] absolute top-[80px] left-[10%] lg:top-[160px] lg:left-[17%] tracking-[2px] cursor-default text-transparent font-[Kanit] bg-clip-text bg-no-repeat lg:bg-fixed ${css`
               background-image: url(/images/Introduction.jpg);
               background-position: 50%;
               background-size: 100%;
@@ -74,7 +74,7 @@ const AboutMe: React.FC<AboutMeProps> = () => {
               </p>
             </div>
             <div
-              className={`flex items-center justify-start lg:justify-end mt-[40px] z-10 text-transparent font-[Kanit] tracking-[1px] bg-clip-text bg-no-repeat bg-fixed ${css`
+              className={`flex items-center justify-start lg:justify-end mt-[40px] z-10 text-[#ECF5FF] lg:text-transparent font-[Kanit] tracking-[1px] bg-clip-text bg-no-repeat lg:bg-fixed ${css`
                 background-image: url(/images/Introduction.jpg);
                 background-position: 50%;
                 background-size: 100%;
@@ -94,7 +94,7 @@ const AboutMe: React.FC<AboutMeProps> = () => {
           </div>
           <div className="w-[100%] lg:w-[45%]">
             <h1
-              className={`text-[48px] lg:text-[160px] text-right z-10 text-transparent font-[Kanit] tracking-[1px] bg-clip-text bg-no-repeat bg-fixed ${css`
+              className={`text-[48px] lg:text-[160px] text-right z-10 text-transparent font-[Kanit] tracking-[1px] bg-clip-text bg-no-repeat lg:bg-fixed ${css`
                 background-image: url(/images/Introduction.jpg);
                 background-position: 50%;
                 background-size: 100%;
