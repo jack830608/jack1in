@@ -30,11 +30,9 @@ ${css`
     }
   }
 `}`;
-const timelineCompany =
-  "text-[hsla(0,0%,100%,.9)] text-lg mb-[5px] font-semibold";
+const timelineCompany = "text-[hsla(0,0%,100%,.9)] text-lg mb-[5px] font-semibold";
 const timelinePeriod = "text-[hsla(0,0%,100%,.9)] text-sm font-light mb-4";
-const timelineInfo =
-  "text-[hsla(0,0%,100%,.7)] text-sm font-light leading-[22px]";
+const timelineInfo = "text-[hsla(0,0%,100%,.7)] text-sm font-light leading-[22px]";
 const timelineSpot =
   "border-[5px] border-[#151515] w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] left-[12px] lg:left-[50%] translate-x-[-15px] lg:translate-x-[-20px] top-2 rounded-full absolute bg-[#e7b266]";
 
@@ -47,7 +45,7 @@ const Experience: React.FC<ExperienceProps> = () => {
     if (isInView) {
       dispatch({ type: "ADD_SECTION", payload: "Experience" });
     } else {
-      dispatch({ type: "REMOVE_SECTION", payload: 'Experience' });
+      dispatch({ type: "REMOVE_SECTION", payload: "Experience" });
     }
   }, [dispatch, isInView]);
   return (
@@ -127,9 +125,9 @@ const Experience: React.FC<ExperienceProps> = () => {
                   <i>2020-08 ~ Now</i>
                 </div>
                 <p className={timelineInfo}>
-                  In Positive Grid my responsibility is to help our e-commerce
-                  site faster and stabler, at the same time I need to lead two
-                  junior developers to complete tasks from the marketing team.
+                  In Positive Grid my responsibility is to help our e-commerce site faster and stabler, at the same time
+                  I need to lead two junior developers to complete tasks from the marketing team and also develop F2E
+                  toolbox that includes a platform of image upload and anchor link creator.
                 </p>
                 <br />
                 <p>
@@ -149,10 +147,10 @@ const Experience: React.FC<ExperienceProps> = () => {
                   <i>2019-11 ~ 2020-08</i>
                 </div>
                 <p className={timelineInfo}>
-                  Vpon is an advertising company combining big data, for me it's
-                  completely different from my previous job. There are more than
-                  70 engineers in Vpon so we can exchange skills with each other
-                  and exposed to many new skills not limited to the front-end.
+                  Vpon is an advertising company combining big data, I'm responsible for embedding our tracking code to
+                  customer's websites, developing the AD template and the proudest thing is I create a platform of AD
+                  demo that the user just need to upload the images and select the template to see the result, it helps
+                  our sales to show their customer what does AD look like on web or APP.
                 </p>
                 <br />
                 <p>
@@ -172,11 +170,9 @@ const Experience: React.FC<ExperienceProps> = () => {
                   <i>2019-08 ~ 2020-06</i>
                 </div>
                 <p className={timelineInfo}>
-                  During the time at the Tripmoment, I have been responsible for
-                  more things ,including Front-end and Back-end. It also let me
-                  learn more skill and continue to help the company develop new
-                  products. Although I only worked here for three months, until
-                  now I have been maintaining Tripmoment part-time.
+                  During the time at the Tripmoment, I have been responsible for more things ,including Front-end and
+                  Back-end. It also let me learn more skill and continue to help the company develop new products.
+                  Although I only worked here for three months, until now I have been maintaining Tripmoment part-time.
                 </p>
                 <br />
                 <p>
@@ -190,24 +186,16 @@ const Experience: React.FC<ExperienceProps> = () => {
             <div className="my-[32px] lg:my-[64px] relative">
               <div className={timelineSpot} />
               <div className={timelineBlock("right")}>
-                <h2 className={timelineCompany}>
-                  MemePR - 潮語傳媒股份有限公司
-                </h2>
+                <h2 className={timelineCompany}>MemePR - 潮語傳媒股份有限公司</h2>
                 <div className={timelinePeriod}>
                   <span className="mr-[10px]">Front-end Developer</span>
                   <i>2018-06 ~ 2019-08</i>
                 </div>
                 <p className={timelineInfo}>
-                  Since the love of AI had entered MemePR, there is no
-                  difference in seniority here, As long as what is done is
-                  right, it can be played. Finally, with the efforts of
-                  everyone, we have successfully created our first chatbot
-                  <a
-                    href="https://www.sbot.ai"
-                    className="link"
-                    target="blank"
-                    style={{ marginLeft: "5px" }}
-                  >
+                  Since the love of AI had entered MemePR, there is no difference in seniority here, As long as what is
+                  done is right, it can be played. Finally, with the efforts of everyone, we have successfully created
+                  our first chatbot
+                  <a href="https://www.sbot.ai" className="link" target="blank" style={{ marginLeft: "5px" }}>
                     Sbot
                   </a>
                   .
@@ -216,8 +204,7 @@ const Experience: React.FC<ExperienceProps> = () => {
                 <p>
                   <span className="text-white font-light">Skill：</span>
                   <span className={`${timelineInfo} italic`}>
-                    HTML5、CSS3、JavaScript、Node.js、Express、React、Redux、Styled
-                    Components、Next.js、AWS、postgreSQL
+                    HTML5、CSS3、JavaScript、Node.js、Express、React、Redux、Styled Components、Next.js、AWS、postgreSQL
                   </span>
                 </p>
               </div>
@@ -240,21 +227,17 @@ const Experience: React.FC<ExperienceProps> = () => {
                   <i>2017-09 ~ 2018-06</i>
                 </div>
                 <p className={timelineInfo}>
-                  I have experienced a completely different corporate culture
-                  and agile spirit than the previous company and always thinks
-                  about the balance between efficiency and quality. It can
-                  quickly bring products to the market while ensuring the
-                  replacement of product value. The process of verifying whether
-                  it meets the needs of customers is essentially a baptism of
-                  flames, giving me a new understanding of teamwork, and making
-                  me more accountable.
+                  I have experienced a completely different corporate culture and agile spirit than the previous company
+                  and always thinks about the balance between efficiency and quality. It can quickly bring products to
+                  the market while ensuring the replacement of product value. The process of verifying whether it meets
+                  the needs of customers is essentially a baptism of flames, giving me a new understanding of teamwork,
+                  and making me more accountable.
                 </p>
                 <br />
                 <p>
                   <span className="text-white font-light">Skill：</span>
                   <span className={`${timelineInfo} italic`}>
-                    HTML5、CSS3、JavaScript、Node.js、Express、MongoDB、Mongoose、Angular.js
-                    (1.x)、LineBot
+                    HTML5、CSS3、JavaScript、Node.js、Express、MongoDB、Mongoose、Angular.js (1.x)、LineBot
                   </span>
                 </p>
               </div>
