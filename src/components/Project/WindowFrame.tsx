@@ -2,7 +2,7 @@ import React from "react";
 
 type WindowFrameProps = {
   device: "mobile" | "desktop";
-  url: string;
+  url?: string;
   image: string;
   content: string;
 };
@@ -16,8 +16,12 @@ const WindowFrame: React.FC<WindowFrameProps> = ({
     <div className="flex items-center flex-col lg:px-[10%]">
       {device !== "mobile" ? (
         <div
-          className="w-full mx-[2.5%] cursor-pointer"
-          onClick={() => window.open(url, "_blank")}
+          className={`w-full mx-[2.5%] ${url ? 'cursor-pointer' : ''}`}
+          onClick={() => {
+            if(url){
+              window.open(url, "_blank")
+            }
+          }}
         >
           <div className="flex items-center pt-[7px] pr-[25px] pb-[5px] pl-[15px] lg:pt-[15px] lg:pr-[30px] lg:pb-[10px] lg:pl-[20px] justify-between bg-[#484848] rounded-t-xl">
             <div className="flex items-center">
@@ -35,8 +39,12 @@ const WindowFrame: React.FC<WindowFrameProps> = ({
         </div>
       ) : (
         <div
-          className="w-full mx-[2.5%] cursor-pointer"
-          onClick={() => window.open(url, "_blank")}
+          className={`w-full mx-[2.5%] ${url ? 'cursor-pointer' : ''}`}
+          onClick={() => {
+            if(url){
+              window.open(url, "_blank")
+            }
+          }}
         >
           <img src={`/images/project/${image}`} width="100%" alt="project" />
         </div>

@@ -12,7 +12,7 @@ SwiperCore.use([Pagination, Autoplay]);
 
 type ProjectProps = {};
 const projectList: {
-  url: string;
+  url?: string;
   image: string;
   content: string;
   device: "mobile" | "desktop";
@@ -25,7 +25,6 @@ const projectList: {
     device: "desktop",
   },
   {
-    url: "https://api.lifegoez.com/admin/signin",
     image: "line_bot.png",
     content:
       "This is my independent project, It's the reservation system for the beauty nail industry, stores can set branch info, opening hours, and store closure dates in the dashboard, then customers can use the Line App to book and check the status of the order.",
@@ -46,7 +45,6 @@ const projectList: {
     device: "desktop",
   },
   {
-    url: "https://jojo.cool",
     image: "jojo.png",
     content:
       "JoJo is my first side project, which can easily match everybody's free time and send the result to every participant.",
@@ -60,7 +58,6 @@ const projectList: {
     device: "desktop",
   },
   {
-    url: "https://jack1in.com/koko_game/",
     image: "koko.png",
     content:
       "This is  a game on the web, I'm responsible for front-end UI and animation effects, using pure javascript, HTML, and CSS, without using any front-end framework.",
