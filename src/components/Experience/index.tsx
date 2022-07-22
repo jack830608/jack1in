@@ -151,11 +151,11 @@ const Experience: React.FC<ExperienceProps> = () => {
                 </div>
                 <ul className={`${timelineInfo} pl-4`}>
                   <li>
-                    - Build a platform of AD demo that the user needs to upload the images and select the template to see
+                    Build a platform of AD demo that the user needs to upload the images and select the template to see
                     the result, it helps our sales to show customers what AD looks like on the web or APP
                   </li>
-                  <li>- Develop the AD template</li>
-                  <li>- Embed tracking code to customer's websites</li>
+                  <li>Develop the AD template</li>
+                  <li>Embed tracking code to customer's websites</li>
                 </ul>
                 <br />
                 <p>
