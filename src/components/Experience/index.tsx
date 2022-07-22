@@ -32,7 +32,7 @@ ${css`
 `}`;
 const timelineCompany = "text-[hsla(0,0%,100%,.9)] text-lg mb-[5px] font-semibold";
 const timelinePeriod = "text-[hsla(0,0%,100%,.9)] text-sm font-light mb-4";
-const timelineInfo = "text-[hsla(0,0%,100%,.7)] text-sm font-light leading-[22px]";
+const timelineInfo = "text-[hsla(0,0%,100%,.7)] text-sm font-light leading-[22px] list-disc";
 const timelineSpot =
   "border-[5px] border-[#151515] w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] left-[12px] lg:left-[50%] translate-x-[-15px] lg:translate-x-[-20px] top-2 rounded-full absolute bg-[#e7b266]";
 
@@ -124,14 +124,17 @@ const Experience: React.FC<ExperienceProps> = () => {
                   <span className="mr-[10px]">Senior Front-end Developer</span>
                   <i>2020-08 ~ Now</i>
                 </div>
-                <p className={timelineInfo}>
-                  In Positive Grid my responsibility is to help our e-commerce site faster and stabler, at the same time
-                  I need to lead two junior developers to complete tasks from the marketing team and also develop F2E
-                  toolbox that includes a platform of image upload and anchor link creator.
-                </p>
+                <ul className={`${timelineInfo} pl-4`}>
+                  <li>Improve e-commerce site faster and stabler</li>
+                  <li>Implement e-commerce's new feature</li>
+                  <li>Rebuild user-center</li>
+                  <li>Lead junior developers to complete tasks</li>
+                  <li>Build F2E toolbox to help marketing colleagues easier to operate e-commerce site</li>
+                  <li>Integrate Lighthouse CI in our CI/CD</li>
+                </ul>
                 <br />
                 <p>
-                  <span className="text-white font-light">Skill：</span>
+                  <span className="text-white font-light">Skills：</span>
                   <span className={`${timelineInfo} italic`}>
                     HTML5、CSS3、JavaScript、TypeScript、Tailwind、emotion、Node.js、Express、React、Next.js、Jest、Playwright
                   </span>
@@ -146,15 +149,17 @@ const Experience: React.FC<ExperienceProps> = () => {
                   <span className="mr-[10px]">Software Engineer</span>
                   <i>2019-11 ~ 2020-08</i>
                 </div>
-                <p className={timelineInfo}>
-                  Vpon is an advertising company combining big data, I'm responsible for embedding our tracking code to
-                  customer's websites, developing the AD template and the proudest thing is I create a platform of AD
-                  demo that the user just need to upload the images and select the template to see the result, it helps
-                  our sales to show their customer what does AD look like on web or APP.
-                </p>
+                <ul className={`${timelineInfo} pl-4`}>
+                  <li>
+                    - Build a platform of AD demo that the user needs to upload the images and select the template to see
+                    the result, it helps our sales to show customers what AD looks like on the web or APP
+                  </li>
+                  <li>- Develop the AD template</li>
+                  <li>- Embed tracking code to customer's websites</li>
+                </ul>
                 <br />
                 <p>
-                  <span className="text-white font-light">Skill：</span>
+                  <span className="text-white font-light">Skills：</span>
                   <span className={`${timelineInfo} italic`}>
                     HTML5、CSS3、JavaScript、jQuery、Node.js、Express、React、MySQL、Docker、GTM、GA、ShellScript
                   </span>
@@ -176,7 +181,7 @@ const Experience: React.FC<ExperienceProps> = () => {
                 </p>
                 <br />
                 <p>
-                  <span className="text-white font-light">Skill：</span>
+                  <span className="text-white font-light">Skills：</span>
                   <span className={`${timelineInfo} italic`}>
                     HTML5、CSS3、JavaScript、Node.js、Express、React、Redux、ejs、postgreSQL、GCP
                   </span>
@@ -202,7 +207,7 @@ const Experience: React.FC<ExperienceProps> = () => {
                 </p>
                 <br />
                 <p>
-                  <span className="text-white font-light">Skill：</span>
+                  <span className="text-white font-light">Skills：</span>
                   <span className={`${timelineInfo} italic`}>
                     HTML5、CSS3、JavaScript、Node.js、Express、React、Redux、Styled Components、Next.js、AWS、postgreSQL
                   </span>
@@ -235,7 +240,7 @@ const Experience: React.FC<ExperienceProps> = () => {
                 </p>
                 <br />
                 <p>
-                  <span className="text-white font-light">Skill：</span>
+                  <span className="text-white font-light">Skills：</span>
                   <span className={`${timelineInfo} italic`}>
                     HTML5、CSS3、JavaScript、Node.js、Express、MongoDB、Mongoose、Angular.js (1.x)、LineBot
                   </span>
