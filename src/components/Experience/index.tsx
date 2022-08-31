@@ -174,7 +174,7 @@ const Experience: React.FC<ExperienceProps> = () => {
                   <span className="mr-[10px]">Front-end Developer</span>
                   <i>2019-08 ~ 2020-06</i>
                 </div>
-                <ul className={timelineInfo}>
+                <ul className={`${timelineInfo} pl-4`}>
                   <li>Develop new posts UI</li>
                   <li>Refactor codebase and improve site faster and stabler</li>
                   <li>Develop the AD template</li>
