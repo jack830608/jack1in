@@ -174,11 +174,13 @@ const Experience: React.FC<ExperienceProps> = () => {
                   <span className="mr-[10px]">Front-end Developer</span>
                   <i>2019-08 ~ 2020-06</i>
                 </div>
-                <p className={timelineInfo}>
-                  During the time at the Tripmoment, I have been responsible for more things ,including Front-end and
-                  Back-end. It also let me learn more skill and continue to help the company develop new products.
-                  Although I only worked here for three months, until now I have been maintaining Tripmoment part-time.
-                </p>
+                <ul className={timelineInfo}>
+                  <li>Develop new posts UI</li>
+                  <li>Refactor codebase and improve site faster and stabler</li>
+                  <li>Develop the AD template</li>
+                  <li>Embed third-party ADs</li>
+                  <li>Connect third-party payment</li>
+                </ul>
                 <br />
                 <p>
                   <span className="text-white font-light">Skills：</span>
