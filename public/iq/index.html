@@ -59,7 +59,6 @@
           </div>
         </div>
       `;
-      show = true;
       document.querySelectorAll("button").forEach((i) => {
         i.addEventListener("click", () => {
           document.querySelectorAll(".fail").forEach((f) => {
@@ -72,6 +71,8 @@
           });
         });
       });
+      document.querySelector('iframe').style.height = '100vh';
+      show = true;
     });
   </script>
 </html>
