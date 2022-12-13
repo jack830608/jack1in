@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script&display=swap");
+.container_fion {
+  background-image: url("./images/cat.png");
+  height: 100vh;
+  width: 100vw;
+}
+.box_fion {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.cardHolder_fion {
+  width: 470px;
+  height: 700px;
+  background-image: url("./images/fion.jpeg");
+  background-size: cover;
+  border-radius: 15px;
+  color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(12, 0, 51, 1);
+  position: relative;
+}
+.cardHolder1_fion {
+  width: 470px;
+  height: 700px;
+  background-image: url("./images/fion1.jpeg");
+  background-size: cover;
+  border-radius: 15px;
+  color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(12, 0, 51, 1);
+  position: relative;
+}
+.card_fion {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  font-size: 16px;
+  line-height: 35px;
+  font-weight: 300;
+  overflow: auto;
+}
+.title_fion {
+  font-family: "Dancing Script", cursive;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.content_fion {
+  margin-bottom: 5px;
+}
+.content1_fion {
+  margin-bottom: 20px;
+}
+.content2_fion {
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 80px;
+}
+.content3_fion {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  text-align: right;
+}
+.circle_fion {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 1px 1px 3px 2px rgba(12, 0, 51, 0.2) inset;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.cardList_fion {
+    position: absolute;
+  }
+.cardList1_fion {
+  position: absolute;
+  transform: translateX(30px);
+}
+@media only screen and (max-width: 768px) {
+  .cardHolder_fion {
+    width: 90vw;
+    height: 90vh;
+  }
+  .cardHolder1_fion {
+    width: 90vw;
+    height: 90vh;
+  }
+  .card_fion {
+    font-size: 14px;
+    line-height: 25px;
+    padding: 20px;
+  }
+  .title_fion {
+    font-size: 35px;
+    margin-bottom: 25px;
+  }
+  .content2_fion {
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .circle_fion {
+    width: 20px;
+    height: 20px;
+    bottom: 8px;
+    right: 8px;
+  }
+  .cardList1_fion {
+    position: absolute;
+    transform: translateY(20px);
+  }
+}
