@@ -27,7 +27,7 @@ const projectList: {
   {
     image: "line_bot.png",
     content:
-      "This is my independent project, It's the reservation system for the beauty nail industry, stores can set branch info, opening hours, and store closure dates in the dashboard, then customers can use the Line App to book and check the status of the order.",
+      "It's the reservation system for the beauty nail industry, stores can set branch info, opening hours, and store closure dates in the dashboard, then customers can use the Line App to book and check the status of the order.",
     device: "mobile",
   },
   {
@@ -42,12 +42,6 @@ const projectList: {
     image: "memepr.png",
     content:
       "MemePR is a marketing matching platform, lets customers with marketing needs match with marketing companies through an automatic system. I'm mainly responsible for front-end UI development.",
-    device: "desktop",
-  },
-  {
-    image: "jojo.png",
-    content:
-      "JoJo is my first side project, which can easily match everybody's free time and send the result to every participant.",
     device: "desktop",
   },
   {
@@ -76,6 +70,13 @@ const projectList: {
     content:
       "This app is a dating app for women, Customer can join or create activities easily, I am responsible for the entire app front-end and back-end.",
     device: "mobile",
+  },
+    {
+    url: "https://applecensorship.com",
+    image: "applecensorship.png",
+    content:
+      "AppleCensorship expose Apple’s widespread censorship and its consequences, I am responsible for the entire web front-end",
+    device: "desktop",
   },
 ];
 const Project: React.FC<ProjectProps> = () => {
