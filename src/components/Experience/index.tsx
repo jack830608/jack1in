@@ -125,12 +125,44 @@ const Experience: React.FC<ExperienceProps> = () => {
                   <i>2020-08 ~ Now</i>
                 </div>
                 <ul className={`${timelineInfo} pl-4`}>
-                  <li>Improve e-commerce site faster and stabler</li>
-                  <li>Implement e-commerce's new feature</li>
-                  <li>Rebuild user-center</li>
-                  <li>Lead junior developers to complete tasks</li>
-                  <li>Build F2E toolbox to help marketing colleagues easier to operate e-commerce site</li>
-                  <li>Integrate Lighthouse CI in our CI/CD</li>
+                  <li>
+                    Optimized E-commerce Performance
+                    <ul className="pl-4 list-[circle]">
+                      <li>Enhanced site speed and stability through performance optimization techniques.</li>
+                      <li>Implemented new features aligned with market demands.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Revamped User-Centered Design
+                    <ul className="pl-4 list-[circle]">
+                      <li>Led redesign efforts for a more intuitive user experience.</li>
+                      <li>Gathered and incorporated user feedback for iterative improvements.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Mentored Junior Developers
+                    <ul className="pl-4 list-[circle]">
+                      <li>Provided guidance to junior developers, ensuring project success.</li>
+                      <li>Conducted code reviews and knowledge sharing sessions.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Built Front-end Toolbox for Marketing
+                    <ul className="pl-4 list-[circle]">
+                      <li>Developed user-friendly tools for marketing team's ease of use.</li>
+                      <li>
+                        Delivered intuitive interfaces and comprehensive documentation to enable seamless adoption of
+                        the toolbox by non-technical users.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Implemented Lighthouse CI in CI/CD Pipeline
+                    <ul className="pl-4 list-[circle]">
+                      <li>Incorporated Lighthouse CI for automated performance audits.</li>
+                      <li>Set performance benchmarks for early issue detection.</li>
+                    </ul>
+                  </li>
                 </ul>
                 <br />
                 <p>
