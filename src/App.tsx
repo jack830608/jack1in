@@ -12,7 +12,7 @@ const App = () => {
   const [removed, setRemoved] = useState(false);
   useEffect(() => {
     const image = document.createElement("img");
-    image.src = "/images/head.png";
+    image.src = "/images/head-pixel.png";
     image.onload = () => {
       setTimeout(() => sedLoaded(true), 1500);
       setTimeout(() => setRemoved(true), 2500);

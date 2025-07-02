@@ -44,9 +44,9 @@ const Banner: React.FC<BannerProps> = () => {
     >
       <div
         className={`bg-no-repeat absolute w-screen h-screen z-10 ${css`
-          background-image: url("/images/head.png");
+          background-image: url("/images/head-pixel.png");
           background-size: auto 50%;
-          background-position: bottom -35px right -30px;
+          background-position: bottom -55px right 30px;
           @media only screen and (min-width: 768px) {
             background-size: auto 60%;
           }
